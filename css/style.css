@@ -2021,25 +2021,13 @@ Smartphone / small tablet
 --------------------------------------------------------------*/
 
 @media only screen and  (max-width: 540px) {
-
-.box {
-	width: 96.969696969697%;
-}
-#contact_form input{
-	width:100%;
-}
-#project-slider .owl-next ,#project-slider .owl-prev {display:none}
-
-}
-/* ====================
-Retina
---------------------------------------------------------------*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-.container p , .margin{
-	font-size:1.1em;
-	font-weight:400;
-}
-#testimonials-slider p {
-	font-size:18px;
-}
+	.box {
+		width: 96.969696969697%;
+	}
+	#contact_form input{
+		width:100%;
+	}
+	#project-slider .owl-next ,#project-slider .owl-prev {
+		display:none
+	}
 }
