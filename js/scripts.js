@@ -2,11 +2,11 @@
 	$('#main').jpreLoader({
 		loaderVPos: '50%',
 		autoClose: true,
-	}, 
+	},
 	function() {
-		$('#main').animate({"opacity":'1'},{queue:false,duration:700,easing:"easeInOutQuad"});			
+		$('#main').animate({"opacity":'1'},{queue:false,duration:700,easing:"easeInOutQuad"});
 		$('h1.animtext').textillate({ in: { effect: 'flipInX',delayScale: 2.5  } });
-		setTimeout( function(){		
+		setTimeout( function(){
 			$('.fade').animate({"opacity":'1'},{queue:false,duration:1200,easing:"easeInOutQuad"});
 		},2200);
 	});
@@ -15,9 +15,9 @@ function initChulan() {
 
 // functions ------------------
 	"use strict";
-	
+
 	$('h1.animtext').fitText(1.8,{minFontSize:'20px',maxFontSize:'72px'});
-	
+
 // counter ------------------
 
 	function number(num, content, target, duration) {
@@ -34,7 +34,7 @@ function initChulan() {
 				}
 				count++;
 			}, speed);
-		} 
+		}
 		else {
 			target.html(content);
 		}
@@ -46,45 +46,45 @@ function initChulan() {
 			var content  = container.attr('data-content');
 			number(num, content, container, duration);
         });
-	}		
-	
+	}
+
 // Scroll animation   ----------------------------------------
-	
+
 	$('.animaper').appear();
-		
+
 	$(document.body).on('appear', '#about div.anim', function() {
-		$(this).each(function(){ 			
-			setTimeout (function (){				
+		$(this).each(function(){
+			setTimeout (function (){
 				$('#about div.anim').animate({opacity:'1', top:'0'},{queue:true,duration:1200});
-			}, 600 ); 
+			}, 600 );
 		});
 	});
 	$(document.body).on('appear', '#resume div.anim', function() {
-		$(this).each(function(){ 			
-			setTimeout (function (){				
+		$(this).each(function(){
+			setTimeout (function (){
 				$('#resume div.anim').animate({opacity:'1', top:'0'},{queue:true,duration:1200});
-			}, 600 ); 
+			}, 600 );
 		});
 	});
 	$(document.body).on('appear', '#work div.anim', function() {
-		$(this).each(function(){ 			
-			setTimeout (function (){				
+		$(this).each(function(){
+			setTimeout (function (){
 				$('#work div.anim').animate({opacity:'1', top:'0'},{queue:true,duration:1200});
-			}, 600 ); 
+			}, 600 );
 		});
-	});		
+	});
 	$(document.body).on('appear', '#services div.anim', function() {
-		$(this).each(function(){ 			
-			setTimeout (function (){				
+		$(this).each(function(){
+			setTimeout (function (){
 				$('#services div.anim').animate({opacity:'1', top:'0'},{queue:true,duration:1200});
-			}, 600 ); 
+			}, 600 );
 		});
-	});	
+	});
 	$(document.body).on('appear', '#contacts div.anim', function() {
-		$(this).each(function(){ 			
-			setTimeout (function (){				
+		$(this).each(function(){
+			setTimeout (function (){
 				$('#contacts div.anim').animate({opacity:'1', top:'0'},{queue:true,duration:1200});
-			}, 600 ); 
+			}, 600 );
 		});
 	});
 
@@ -93,11 +93,11 @@ function initChulan() {
 		if ($i === 1) { stats(2600); }
 		$i++;
 		$('.num').removeClass('scale-small');
-	});	
+	});
 	$(document.body).on('appear', '#facts ul li', function(e) {
 
 		$('#facts ul li').removeClass('scale-small');
-	});		
+	});
 	$(".show-skills").click( function(){
 		$(this).find('i').toggleClass('but-rotade');
 		$('.piechart-holder').slideToggle(500);
@@ -108,14 +108,14 @@ function initChulan() {
 					$(this.el).find('.percent').text(Math.round(percent));
 				}
 			});
-				
+
 		}, 500 );
 	var text = $('.show-skills').find('span').text();
     $('.show-skills').find('span').text(
         text == "show skills" ? "hide skills" : "show skills");
 	});
-	
-// MagnificPopup  ----------------------------------------	
+
+// MagnificPopup  ----------------------------------------
 
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'ajax',
@@ -123,48 +123,48 @@ function initChulan() {
 		overflowY: 'scroll' ,
 		fixedContentPos: false,
 		fixedBgPos: true,
-		closeBtnInside: false,	
+		closeBtnInside: false,
 		midClick: true,
 		removalDelay: 600,
-		mainClass: 'my-mfp-slide-bottom',         
+		mainClass: 'my-mfp-slide-bottom',
 		callbacks: {
 			ajaxContentAdded: function() {
 				$("#project-slider").owlCarousel({
 					navigation : true,
-					pagination:true, 
+					pagination:true,
 					slideSpeed : 300,
 					paginationSpeed : 400,
 					singleItem:true,
-					transitionStyle : "backSlide"				
+					transitionStyle : "backSlide"
 				 });
 				 $('.white-popup-block h2').textillate({in:{effect:'flipInX',delayScale: 3.5}});
-				 
+
 			}
 		}
 	});
-	
+
 	$('.popup-youtube, .popup-vimeo').magnificPopup({
 		disableOn: 700,
 		type: 'iframe',
 		removalDelay: 600,
-		mainClass: 'my-mfp-slide-bottom', 
+		mainClass: 'my-mfp-slide-bottom',
 	});
-	
+
 	$('.popup-gallery').magnificPopup({
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
 		removalDelay: 600,
-		mainClass: 'my-mfp-slide-bottom', 
+		mainClass: 'my-mfp-slide-bottom',
 		gallery: {
 			enabled: true,
-			navigateByImgClick: true, 
+			navigateByImgClick: true,
 			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
 		},
 		image: {
 			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
 		}
-	});	
-	
+	});
+
 	$('.image-popup').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
@@ -174,45 +174,40 @@ function initChulan() {
 			verticalFit: true
 		}
 	});
-	
-// OwlCarousel  ----------------------------------------	
-	
+
+// OwlCarousel  ----------------------------------------
+
 	$("#services-carusel").owlCarousel({
 		navigation:true,
 		slideSpeed : 500,
 		pagination : false,
-		items : 3, 
+		items : 3,
       	itemsDesktop : false,
       	itemsDesktopSmall : [1200,2],
       	itemsTablet: [979,2],
       	itemsMobile : [740,1]
-		
+
      });
-	
- 
+
+
 	$('#testimonials-slider').owlCarousel({
 		navigation : true,
-		pagination:true, 
+		pagination:true,
 		slideSpeed : 300,
 		paginationSpeed : 400,
 		singleItem:true,
 		transitionStyle : "goDown"
-	});	
-	
+	});
+
 // Navigation + custoum  scripts----------------------------------------
-		
-	$('#options li').click(function(){
-		$('#options li').removeClass('actcat');
-		$(this).addClass('actcat');
-	});
-	
+
 	$('.nav-button').bind('click', function() {
-		$('.link-holder').slideToggle(500);	
+		$('.link-holder').slideToggle(500);
 	});
-	
+
 	$("a.scroll-link").bind('click', function(event) {
 		event.preventDefault();
-		$.scrollTo( 
+		$.scrollTo(
 			$(this).attr('href'),950,{easing:'swing',offset: 0,'axis':'y'} );
 	});
 
@@ -225,11 +220,11 @@ function initChulan() {
 		filter: '',
 		easing: 'swing',
 	});
-	
+
 	var ww = $(window).width();
 
 	if( ww < 959){
-	
+
 		$('.link-holder').onePageNav({
 			currentClass: 'cur',
 			changeHash: false,
@@ -240,14 +235,14 @@ function initChulan() {
 			easing: 'swing',
 		});
 		$('.link-holder a').click(function(){
-			setTimeout (function (){				
+			setTimeout (function (){
 				$('.link-holder').slideUp(500);
 			}, 600 );
-		});		
+		});
 	}
-	
+
 // Mixitup  ----------------------------------------
-	
+
 	$('#folio_container').mixitup({
 		targetSelector: '.box',
 		effects: ['fade','rotateX'],
@@ -257,16 +252,16 @@ function initChulan() {
     	targetDisplayGrid: 'inline-block',
     	targetDisplayList: 'block',
 	});
-			
+
 };
 
-$(document).ready(function(){	
-	initChulan();		
+$(document).ready(function(){
+	initChulan();
 });
 
 // Contact submit  ----------------------------------------
 
-	$("#submit_btn").click(function(){		
+	$("#submit_btn").click(function(){
 		var user_name=$('input[name=name]').val();
 		var user_email=$('input[name=email]').val();
 		var user_message=$('textarea[name=message]').val();
@@ -296,20 +291,20 @@ $(document).ready(function(){
 				});
 			}
 	});
-	
-	$("#contact_form input, #contact_form textarea").keyup(function(){		
+
+	$("#contact_form input, #contact_form textarea").keyup(function(){
 			$("#contact_form input, #contact_form textarea").css('border','2px solid #fff');
-			$("#result").fadeOut(700)			
-	});	
+			$("#result").fadeOut(700)
+	});
 
 // google map styles and functions  --------
 
 	var map;
-	
+
 	// your coordinates   --------
-	
-	var Chulan = new google.maps.LatLng(40.761467,-73.956379);	
-	function initialize() {	
+
+	var Chulan = new google.maps.LatLng(40.761467,-73.956379);
+	function initialize() {
 	   var styles = [
     {
 		featureType: 'water',
@@ -375,8 +370,8 @@ $(document).ready(function(){
 			{ visibility: 'on' }
 		]
 	}
-	
-	  ];  
+
+	  ];
 	  var mapOptions = {
 		zoom:17,
 		zoomControl: true,
@@ -392,19 +387,19 @@ $(document).ready(function(){
 		 mapOptions);
 	var styledMapOptions = {
 		  name: "Chulan"
-	}	
+	}
 	var jayzMapType = new google.maps.StyledMapType(
 		styles, styledMapOptions);
 	map.mapTypes.set('bestfromgoogle', jayzMapType);
-	map.setMapTypeId('bestfromgoogle');				
+	map.setMapTypeId('bestfromgoogle');
 	var companyImage = new google.maps.MarkerImage('images/marker.png',
 		new google.maps.Size(64,64),
 		new google.maps.Point(0,0),
 		new google.maps.Point(64,64)
 	);
-	
+
 	// your marker coordinates   --------
-	
+
 	var companyPos = new google.maps.LatLng(40.761467,-73.956379);
 	var companyMarker = new google.maps.Marker({
 		position: companyPos,
@@ -415,7 +410,7 @@ $(document).ready(function(){
 }
 //  definition of mobile browser------------------
 
-	var isMobile = { 
+	var isMobile = {
        Android: function() {
             return navigator.userAgent.match(/Android/i);
         },
@@ -434,27 +429,20 @@ $(document).ready(function(){
         any: function() {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
-		
+
     };
-	
-// if not mobile ------------------  
-	
+
+// if not mobile ------------------
+
 	trueMobile = isMobile.any();
-	
+
 	if (trueMobile == null){
 		$('.parallax-facts').parallax("70%", 0.3);
 		$('.parallax-testimonials').parallax("70%", 0.3);
-		$('.box').hover(function(){
-			$(this).find('div.folio-overlay').stop(true,true).animate({opacity:'0.9',left:'10px' , top:'10px'},{queue:true,duration:500,easing:"swing"});
-			$(this).find('div.folio-button').addClass('scale-big');	
-				},function(){
-			$(this).find('div.folio-overlay').stop(true,true).animate({opacity:'0',left:'0' , top:'0'},{queue:true,duration:500,easing:"easeInOutBack"});
-			$(this).find('div.folio-button').removeClass('scale-big');
-		});	
 
 		$('.start-holder').hover(function(){
-			$('.start-decor').addClass('start-rotade');	
+			$('.start-decor').addClass('start-rotade');
 				},function(){
-			$('.start-decor').removeClass('start-rotade');	
-		});	
+			$('.start-decor').removeClass('start-rotade');
+		});
 	}
