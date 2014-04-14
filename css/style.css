@@ -1385,10 +1385,10 @@ Color styles
 	background:#54BABB;
 	color:#fff;
 }
-#jprePercentage, h3.animtext, .margin , .link-holder ul li a:hover, .num , #resume  a.button , .resume-date h4 ,.resume-info h4 , .icon-holder i , .services-box-info h5 , #order a.button , .client-name , .contact-details ul li i , .contact-details ul li span , .submit_btn:hover , .social-list ul li a , .folio-overlay h5 , .desktop-screen-navigation ul li.current a , .desktop-screen-navigation ul li:hover a{
+#jprePercentage, h3.animtext, .margin , .link-holder ul li a:hover, .num , #resume  a.button , .resume-date h4 ,.resume-info h4 , .icon-holder i , .services-box-info h5 , #order a.button , .client-name , .contact-details ul li i , .contact-details ul li span , .submit_btn:hover , .social-list ul li a, .desktop-screen-navigation ul li.current a , .desktop-screen-navigation ul li:hover a{
 	color: #54BABB;
 }
-#jpreBar, .nav-holder , .desktop-screen-navigation ul li , .button , .show-skills  span , .background-color, .box  a, .box  a div.folio-name , .white-popup-block a.lanch-button , .separator , .price ,#order div.content, .testimonials-shadow , #contact_form textarea:focus, #contact_form input:focus , .submit_btn , #footer .content , .folio-button , .nav-top span{
+#jpreBar, .nav-holder , .desktop-screen-navigation ul li , .button , .show-skills  span , .background-color, .box  a, .box  a div.folio-name , .white-popup-block a.lanch-button , .separator , .price ,#order div.content, .testimonials-shadow , #contact_form textarea:focus, #contact_form input:focus , .submit_btn , #footer .content , .nav-top span{
 	background:#54BABB;
 }
 .start-decor:after {
@@ -1535,9 +1535,6 @@ Media
 	margin-top:20px;
 	margin-left:0;
 }
-.folio-overlay h3{
-	margin-top:10%;
-}
 }
 /* ====================
 Tablet / netbooks
@@ -1622,9 +1619,6 @@ Tablet / netbooks
 }
 .box {
 	width: 46.969696969697%;
-}
-.folio-overlay h3{
-	margin-top:30%;
 }
 }
 
