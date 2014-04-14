@@ -1017,11 +1017,9 @@ Work
 .white-popup-block{
 	max-width:900px;
 	margin: 50px auto;
-	padding:0 0 90px;
 }
 .white-popup-block div.content{
 	background:#fff;
-	padding-bottom:90px;
 }
 .slider-content{
 	position:relative;
@@ -1083,6 +1081,27 @@ Work
 	height:1px;
 	margin:0 auto 10px;
 }
+
+	/* ====================
+	Project 1
+	--------------------------------------------------------------*/
+	#boston-finds .content a {
+		float: left;
+		width: 500px;
+	}
+	#boston-finds .content .overview {
+		float: right;
+		padding: 1em 2em 0 2em;
+		width: 400px;
+	}
+		#boston-finds .content ul {
+			font-size: 0.6em;
+			list-style: inherit;
+			margin-top: 2em;
+		}
+			#boston-finds .content ul li {
+				margin-bottom: 1.5em;
+			}
 
 /* ====================
 Order
