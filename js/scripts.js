@@ -303,7 +303,9 @@ $(document).ready(function(){
 
 	// your coordinates   --------
 
-	var Chulan = new google.maps.LatLng(40.761467,-73.956379);
+	var lat = 42.3158022,
+			lng = -71.0467315,
+			Chulan = new google.maps.LatLng(lat, lng);
 	function initialize() {
 	   var styles = [
     {
@@ -373,7 +375,7 @@ $(document).ready(function(){
 
 	  ];
 	  var mapOptions = {
-		zoom:17,
+		zoom: 14,
 		zoomControl: true,
 		scaleControl: false,
 		scrollwheel: false,
@@ -400,12 +402,12 @@ $(document).ready(function(){
 
 	// your marker coordinates   --------
 
-	var companyPos = new google.maps.LatLng(40.761467,-73.956379);
+	var companyPos = new google.maps.LatLng(lat, lng);
 	var companyMarker = new google.maps.Marker({
 		position: companyPos,
 		map: map,
 		icon: companyImage,
-		zIndex: 3
+		zIndex: 14
 	});
 }
 //  definition of mobile browser------------------
